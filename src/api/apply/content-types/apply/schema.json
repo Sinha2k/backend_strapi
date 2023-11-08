@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applies",
+  "info": {
+    "singularName": "apply",
+    "pluralName": "applies",
+    "displayName": "Apply"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "job": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job.job"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "status": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
